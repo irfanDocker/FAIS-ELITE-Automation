@@ -12,11 +12,12 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 public class ZapSteps extends ScenarioSteps {
 
-	@Given("^Zap is launched$")
+	@Step("^Zap is launched$")
 	public void Zap_is_launched() throws Throwable {
 
 		Runtime.getRuntime().exec(
@@ -24,7 +25,7 @@ public class ZapSteps extends ScenarioSteps {
 		Thread.sleep(20000);
 	}
 
-	@Given("^Extract ZAP Alerts$")
+	@Step("^Extract ZAP Alerts$")
 	public void Extract_ZAP_Alerts() throws Throwable {
 
 		RestAssured.baseURI = "http://localhost:8090";
@@ -47,7 +48,7 @@ public class ZapSteps extends ScenarioSteps {
 
 	}
 
-	@Then("^Exit ZAP$")
+	@Step("^Exit ZAP$")
 	public void Exit_ZAP() throws Throwable {
 		RestAPIComponents.restGETRequest("http://localhost:8090",
 				"/JSON/core/action/shutdown/?zapapiformat=JSON&apikey=1234&formMethod=GET");

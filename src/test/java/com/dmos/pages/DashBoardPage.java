@@ -3,7 +3,7 @@ package com.dmos.pages;
 
 
 public class DashBoardPage  extends BasePage{
-	private static final String GREETING_MSG = "/html/body/app-root/div/div[2]/app-dashboard/div/a[1]/div/h3";
+	private static final String GREETING_MSG = "/html/body/app-root/div/div[2]/app-dashboard/div[2]/a[1]/div/h5";
 	
 	private static final String LOGOUT = "/html/body/app-root/div/div[1]/div[3]/a[2]";
 

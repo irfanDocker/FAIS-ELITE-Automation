@@ -5,10 +5,11 @@ import java.io.BufferedReader;
 
 import components.Pa11y508Components;
 import cucumber.api.java.en.When;
+import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 public class AccessabilitySteps  extends ScenarioSteps {
 
-	@When("^Test accessability for \"([^\"]*)\" with Pally$")
+	@Step("^Test accessability for \"([^\"]*)\" with Pally$")
 	public void test_accessability_for_with_Pally(String arg1) throws Throwable {
 		BufferedReader r = Pa11y508Components.test508(arg1);
 

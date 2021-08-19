@@ -1,15 +1,12 @@
 # FAIS-ELITE-Automation
 Financial Analysis and Intelligence System-Elite Functional UI automated test
 
-This is a very minimal sample project using JUnit and Serenity BDD in Java. You can use this project as a quick starting point for your own projects.
-
-
+This is a very minimal sample project using JUnit and Serenity BDD in Java.
 
 Install pally and ZAP before you execute automation. 
 
 Accessibility Testing with pa11y
 https://bitsofco.de/pa11y/
-
 
 npm install -g pa11y
 

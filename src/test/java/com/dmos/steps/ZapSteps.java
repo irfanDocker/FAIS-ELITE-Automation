@@ -17,7 +17,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 public class ZapSteps extends ScenarioSteps {
 
-	@Step("^Zap is launched$")
+	@Step("Zap is launched")
 	public void Zap_is_launched() throws Throwable {
 
 		Runtime.getRuntime().exec(
@@ -25,7 +25,7 @@ public class ZapSteps extends ScenarioSteps {
 		Thread.sleep(20000);
 	}
 
-	@Step("^Extract ZAP Alerts$")
+	@Step("Extract ZAP Alerts")
 	public void Extract_ZAP_Alerts() throws Throwable {
 
 		RestAssured.baseURI = "http://localhost:8090";
@@ -48,7 +48,7 @@ public class ZapSteps extends ScenarioSteps {
 
 	}
 
-	@Step("^Exit ZAP$")
+	@Step("Exit ZAP")
 	public void Exit_ZAP() throws Throwable {
 		RestAPIComponents.restGETRequest("http://localhost:8090",
 				"/JSON/core/action/shutdown/?zapapiformat=JSON&apikey=1234&formMethod=GET");

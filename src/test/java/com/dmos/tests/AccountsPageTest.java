@@ -1,6 +1,7 @@
 package com.dmos.tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
@@ -32,8 +33,8 @@ public class AccountsPageTest {
 		user.doLogin("test", "test");
 
 		String greetingMessage = user.getGreetingMessage();
-
-		assertEquals("Total Revenue by Rental To-Date", greetingMessage);
+		
+		assertTrue(greetingMessage.startsWith("Total Revenue by Month"));
 
 	}
 
